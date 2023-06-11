@@ -1,0 +1,15 @@
+@use "src/styles/_mixins.scss" as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  @include screen(med-small) {
+    flex-direction: row;
+  }
+  &__container {
+    flex: 1;
+    background-color: var(--bg-color);
+    min-height: calc(100vh - var(--sz-header));
+  }
+}
