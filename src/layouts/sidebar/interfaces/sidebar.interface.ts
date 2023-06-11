@@ -1,6 +1,7 @@
 export interface ISidebar {
+  id: number;
   name: string;
-  link: string;
+  route: string;
   children?: IChilLink[];
 }
 
