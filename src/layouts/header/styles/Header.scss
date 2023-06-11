@@ -2,8 +2,9 @@
   position: sticky;
   display: flex;
   align-items: center;
-  top: 0;
-  padding: 1rem;
+  gap: 1rem;
   height: var(--sz-header);
+  padding: 0.5rem 1rem;
+  top: 0;
   background-color: var(--cl-primary);
 }
