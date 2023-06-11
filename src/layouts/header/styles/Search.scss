@@ -1,0 +1,21 @@
+.search {
+  position: relative;
+  &__input {
+    padding-left: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.17);
+    color: var(--cl-white);
+    border-style: none;
+    &::placeholder {
+      color: var(--cl-white);
+    }
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.17);
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.5rem;
+    color: var(--cl-white);
+  }
+}

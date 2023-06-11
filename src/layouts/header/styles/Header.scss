@@ -1,0 +1,10 @@
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: var(--sz-header);
+  padding: 0 1rem;
+  top: 0;
+  background-color: var(--cl-primary);
+}
