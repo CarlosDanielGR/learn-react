@@ -9,3 +9,10 @@ body {
 figure {
   margin: 0;
 }
+
+input {
+  height: 2rem;
+  &:focus-visible {
+    outline: 0;
+  }
+}
