@@ -1,5 +1,5 @@
 import { Logo } from "./components";
-import "./header.scss";
+import "./styles/header.scss";
 
 function Header() {
   return (
