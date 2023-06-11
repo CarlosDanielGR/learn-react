@@ -5,10 +5,10 @@ import "./styles/Sidebar.scss";
 function Sidebar() {
   return (
     <section className="sidebar">
-      {LINKS_SIDEBAR.map((link) => (
-        <Link key={link.id} link={link} />
-      ))}
-      <Accordion />
+      {LINKS_SIDEBAR.map((link) => {
+        if (link.children) return <Accordion />;
+        return <Link key={link.id} link={link} />;
+      })}
     </section>
   );
 }

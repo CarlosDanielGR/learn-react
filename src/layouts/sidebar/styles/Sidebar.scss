@@ -1,4 +1,6 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
   flex-basis: 25%;
   background-color: #141b1f;
 }
