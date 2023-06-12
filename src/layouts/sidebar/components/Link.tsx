@@ -1,15 +1,15 @@
 import { ISidebar } from "../interfaces/sidebar.interface";
 import "./../styles/Link.scss";
 
-interface LinkProps {
-  link: ISidebar;
+interface ILinksProps {
+  linkData: ISidebar;
   isActive: boolean;
   onActive: (id: number) => void;
 }
 
-function Link({ link, onActive, isActive }: LinkProps) {
+function Link({ linkData, onActive, isActive }: ILinksProps) {
   const handleActive = () => {
-    onActive(link.id);
+    onActive(linkData.id);
   };
 
   return (
@@ -17,7 +17,7 @@ function Link({ link, onActive, isActive }: LinkProps) {
       className={"link" + " " + (isActive ? "link--active" : "")}
       onClick={handleActive}
     >
-      {link.name}
+      {linkData.name}
     </a>
   );
 }

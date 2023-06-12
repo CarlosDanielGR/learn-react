@@ -1,11 +1,14 @@
-export interface ISidebar {
+export interface ILinks {
   id: number;
   name: string;
   route: string;
-  children?: IChilLink[];
+}
+
+export interface ISidebar extends ILinks {
+  children?: IChilLink;
 }
 
 interface IChilLink {
-  name: string;
-  link: string;
+  title: string;
+  links: ILinks[];
 }

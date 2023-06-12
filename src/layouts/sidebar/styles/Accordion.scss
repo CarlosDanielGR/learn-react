@@ -13,4 +13,9 @@
   .MuiAccordionSummary-content {
     margin: 0;
   }
+  .MuiAccordionDetails-root {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
 }

@@ -4,7 +4,12 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import "./../styles/Accordion.scss";
 
-function Accordion() {
+interface IAccProps {
+  content: JSX.Element[];
+  title: string;
+}
+
+function Accordion({ content, title }: IAccProps) {
   return (
     <AccordionMat className="accordion">
       <AccordionSummary
@@ -12,9 +17,9 @@ function Accordion() {
         id="panel1a-header"
         expandIcon={<FiChevronDown />}
       >
-        Accordion 1
+        {title}
       </AccordionSummary>
-      <AccordionDetails></AccordionDetails>
+      <AccordionDetails>{content}</AccordionDetails>
     </AccordionMat>
   );
 }
