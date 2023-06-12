@@ -1,0 +1,11 @@
+.link {
+  color: var(--cl-white);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  &--active {
+    background-color: var(--cl-black);
+    border-left: 0.2rem solid var(--cl-primary);
+    padding-left: 0.8rem;
+  }
+}
