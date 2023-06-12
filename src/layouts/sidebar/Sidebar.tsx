@@ -13,7 +13,7 @@ function Sidebar() {
   return (
     <section className="sidebar">
       {LINKS_SIDEBAR.map((link) => {
-        if (link.children) return <Accordion />;
+        if (link.children) return <Accordion key={link.id} />;
         return (
           <Link
             key={link.id}

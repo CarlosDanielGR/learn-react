@@ -1,0 +1,16 @@
+.MuiAccordion-root.accordion {
+  padding: 0.5rem 1rem;
+  color: var(--cl-white);
+  background-color: transparent;
+  box-shadow: none;
+  .MuiAccordionSummary-root {
+    min-height: auto;
+    padding: 0;
+  }
+  .MuiAccordionSummary-expandIconWrapper {
+    color: var(--cl-white);
+  }
+  .MuiAccordionSummary-content {
+    margin: 0;
+  }
+}
