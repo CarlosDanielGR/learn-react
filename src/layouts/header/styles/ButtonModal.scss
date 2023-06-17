@@ -2,14 +2,17 @@
 
 .buttonModal {
   flex: 1;
-  justify-content: flex-end;
-  color: var(--cl-white);
-  background-color: transparent;
-  border-style: none;
   @include screen(med-small) {
     display: none;
   }
-  > svg {
-    font-size: 1.2rem;
+  &__toggle {
+    margin-left: auto;
+    color: var(--cl-white);
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    > svg {
+      font-size: 1.2rem;
+    }
   }
 }

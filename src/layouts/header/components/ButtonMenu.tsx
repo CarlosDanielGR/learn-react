@@ -12,14 +12,16 @@ function ButtonMenu() {
   };
 
   return (
-    <button
-      type="button"
-      className="buttonModal"
-      onClick={() => toggleButtonMenu(isOpenModal)}
-    >
-      <GiHamburgerMenu />
-      <Menu isOpen={isOpenModal} />
-    </button>
+    <div className="buttonModal">
+      <button
+        type="button"
+        className="buttonModal__toggle"
+        onClick={() => toggleButtonMenu(isOpenModal)}
+      >
+        <GiHamburgerMenu />
+        <Menu isOpen={isOpenModal} />
+      </button>
+    </div>
   );
 }
 
