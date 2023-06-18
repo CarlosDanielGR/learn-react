@@ -1,18 +1,7 @@
-@use "src/styles/_mixins.scss" as *;
-
-.buttonModal {
-  flex: 1;
-  @include screen(med-small) {
-    display: none;
-  }
-  &__toggle {
-    margin-left: auto;
-    color: var(--cl-white);
-    background-color: transparent;
-    border-style: none;
-    cursor: pointer;
-    > svg {
-      font-size: 1.2rem;
-    }
+.buttonMenu.MuiButtonBase-root {
+  color: var(--cl-white);
+  border-radius: 25px;
+  > svg {
+    font-size: 1.2rem;
   }
 }
