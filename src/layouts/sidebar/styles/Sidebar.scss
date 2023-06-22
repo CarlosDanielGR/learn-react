@@ -1,7 +1,13 @@
+@use "src/styles/_mixins.scss" as *;
+
 .sidebar {
   display: flex;
   flex-direction: column;
+  flex-basis: 25%;
   padding: 2rem 0;
-  height: 100%;
   background-color: #141b1f;
+  @include screen(custom, max, 992) {
+    flex-basis: auto;
+    height: 100%;
+  }
 }
