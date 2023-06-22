@@ -3,11 +3,11 @@ import "./styles/Header.scss";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <Logo />
       <Search />
       <Menu />
-    </div>
+    </header>
   );
 }
 
