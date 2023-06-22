@@ -1,13 +1,22 @@
+import { useState } from "react";
 import Drawer from "@mui/material/Drawer";
+import { ButtonMenu } from ".";
+import { Sidebar } from "../..";
+import "./../styles/Menu.scss";
 
-interface IMenuProp {
-  isOpen: boolean;
-}
+export default function Menu() {
+  const [isOpen, setIsOpen] = useState(false);
 
-export default function Menu({ isOpen }: IMenuProp) {
+  const toggleButtonMenu = (isOpen: boolean) => {
+    setIsOpen(isOpen);
+  };
+
   return (
-    <Drawer anchor="top" open={isOpen}>
-      <span>test</span>
-    </Drawer>
+    <div className="menu">
+      <ButtonMenu onClick={() => toggleButtonMenu(true)} />
+      <Drawer open={isOpen} onClose={() => toggleButtonMenu(false)}>
+        <Sidebar />
+      </Drawer>
+    </div>
   );
 }
