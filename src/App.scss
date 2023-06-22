@@ -5,6 +5,11 @@
   flex-direction: column;
   gap: 0.5rem;
   background-color: var(--cl-black);
+  .sidebar {
+    @include screen(custom, max, 992) {
+      display: none;
+    }
+  }
   @include screen(med-small) {
     flex-direction: row;
   }

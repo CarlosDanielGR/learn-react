@@ -1,4 +1,4 @@
-import { ButtonMenu, Logo, Search } from "./components";
+import { Logo, Menu, Search } from "./components";
 import "./styles/Header.scss";
 
 function Header() {
@@ -6,7 +6,7 @@ function Header() {
     <div className="header">
       <Logo />
       <Search />
-      <ButtonMenu />
+      <Menu />
     </div>
   );
 }
