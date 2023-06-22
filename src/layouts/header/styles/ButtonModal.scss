@@ -1,6 +1,7 @@
 .buttonMenu.MuiButtonBase-root {
+  min-width: 3.5rem;
   color: var(--cl-white);
   > svg {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
