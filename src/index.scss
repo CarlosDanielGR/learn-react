@@ -1,3 +1,13 @@
 @use "./styles/variables";
 @use "./styles/themes";
-@use "./styles/mixins";
+@use "./styles/mixins" as *;
+
+html {
+  font-size: 12px;
+  @include screen(custom, max, 370) {
+    font-size: 14px;
+  }
+  @include screen(med-small) {
+    font-size: 16px;
+  }
+}

@@ -1,15 +1,16 @@
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Button } from "@mui/material";
 import "./../styles/ButtonModal.scss";
 
-function ButtonMenu() {
-  const handleButtonMenu = () => {
-    console.log("Open modal");
-  };
+interface IButtonMenuProp {
+  onClick?: () => void;
+}
 
+function ButtonMenu({ onClick }: IButtonMenuProp) {
   return (
-    <button type="button" className="buttonModal" onClick={handleButtonMenu}>
+    <Button className="buttonMenu" aria-label="Menu" onClick={onClick}>
       <GiHamburgerMenu />
-    </button>
+    </Button>
   );
 }
 
