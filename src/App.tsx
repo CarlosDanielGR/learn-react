@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header, Sidebar } from "./layouts/index";
-import { Container } from "./pages";
+import { Container, Docker } from "./pages";
 import "./App.scss";
 
 function App() {
@@ -15,6 +16,12 @@ function App() {
       <Header />
       <main className="main">
         <Sidebar />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Docker />} />
+            <Route path="*" element={<>NOT FOUND</>} />
+          </Routes>
+        </BrowserRouter>
         <div className="main__container">
           <Container contentData={contentData} />
         </div>
