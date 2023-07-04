@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { Accordion, Link } from "./components";
 import { LINKS_SIDEBAR } from "./data/sidebar.data";
 import { ILinks } from "./interfaces/sidebar.interface";
-import { newLinkActive } from "../../redux/states/sidebar.state";
+// import { newLinkActive } from "../../redux/states/sidebar.state";
 import "./styles/Sidebar.scss";
 
 function Sidebar() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [linkActive, setLinkActive] = useState(0);
 
   const handleLinkActive = (id: number) => {
     setLinkActive(id);
-    dispatch(newLinkActive(id));
+    // dispatch(newLinkActive(id));
   };
 
   return (

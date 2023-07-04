@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { useSelector, Provider } from "react-redux";
 import { Header, Sidebar } from "./layouts/index";
-import { Container, Docker } from "./pages";
+import Routes from "./helpers/Routes";
+// import store, { IAppStore } from "./redux/store";
 import "./App.scss";
 
 function App() {
   const [contentData, setContentData] = useState([]);
+
+  // const getLinkActive = useSelector((store: IAppStore) => store.linkActive);
 
   const handleContentData = (data: any) => {
     setContentData(data);
@@ -16,14 +19,8 @@ function App() {
       <Header />
       <main className="main">
         <Sidebar />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Docker />} />
-            <Route path="*" element={<>NOT FOUND</>} />
-          </Routes>
-        </BrowserRouter>
         <div className="main__container">
-          <Container contentData={contentData} />
+          <Routes />
         </div>
       </main>
     </>
