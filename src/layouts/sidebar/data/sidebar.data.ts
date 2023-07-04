@@ -4,12 +4,12 @@ export const LINKS_SIDEBAR: ISidebar[] = [
   {
     id: 0,
     name: "Docker overview",
-    route: "",
+    route: "docker",
   },
   {
     id: 1,
     name: "Get Docker",
-    route: "",
+    route: "getstarted",
   },
   {
     id: 2,

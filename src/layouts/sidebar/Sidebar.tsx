@@ -1,5 +1,6 @@
 import { useState } from "react";
 // import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { Accordion, Link } from "./components";
 import { LINKS_SIDEBAR } from "./data/sidebar.data";
 import { ILinks } from "./interfaces/sidebar.interface";
@@ -11,8 +12,12 @@ function Sidebar() {
 
   const [linkActive, setLinkActive] = useState(0);
 
-  const handleLinkActive = (id: number) => {
-    setLinkActive(id);
+  const navigate = useNavigate();
+
+  const handleLinkActive = (linkData: ILinks) => {
+    setLinkActive(linkData.id);
+    navigate(linkData.route);
+
     // dispatch(newLinkActive(id));
   };
 

@@ -1,15 +1,15 @@
-import { ISidebar } from "../interfaces/sidebar.interface";
+import { ILinks, ISidebar } from "../interfaces/sidebar.interface";
 import "./../styles/Link.scss";
 
 interface ILinksProps {
   linkData: ISidebar;
   isActive: boolean;
-  onActive: (id: number) => void;
+  onActive: (linkData: ILinks) => void;
 }
 
 function Link({ linkData, onActive, isActive }: ILinksProps) {
   const handleActive = () => {
-    onActive(linkData.id);
+    onActive(linkData);
   };
 
   return (
